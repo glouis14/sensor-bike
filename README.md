@@ -1,7 +1,8 @@
-SONIC KAYAK SETUP
+SENSOR BIKE SETUP
 =================
 
-Based on the sonic bikes setup, but using Pure Data - more to follow.
+Based on Dave Griffiths' Sonic Kayaks which added pd (pure data) patches to the mix.
+This was expanded with Python scripts to bring in sensor data to these patches, along with the familiar GPS-handling implemented in Lua.
 
 ## The lastest installation instructions can be found here:
 https://github.com/sonicbikes/sonic-bike-init
