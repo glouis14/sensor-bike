@@ -102,3 +102,5 @@ To stop:
 
 ####ftp
 https://www.raspberrypi.org/documentation/remote-access/ssh/sftp.md
+
+=> use SFTP when connecting to the RPi
