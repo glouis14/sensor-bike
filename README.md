@@ -1,12 +1,13 @@
 ###SENSOR BIKE
 
-The Sensor-Bike is an extension of the Sonic-Bike by [Kaffe Matthews / BRI](http://sonicbikes.net) with additional sensors beyond the existing GPS-system.
+The Sensor-Bike is an extension of the Sonic-Bike by [Kaffe Matthews / BRI](http://sonicbikes.net) with additional sensors that go beyond the existing GPS-system.
 
 It inherits code from Wolfgang Hauptfleisch, Dave Griffiths, Tom Keene & Jairo Sanchez.<br>
-The Lua code in particular has been largely untouched so far and continues to handle the GPS-processing. Instead of triggering sound files directly it now forwards zone information via OSC to pd as implemented by Dave.<br>
-The initial pd patches are derived from Dave's [sonic-kayaks](https://github.com/nebogeo/sonic-kayaks)(-[puredata](https://github.com/nebogeo/sonic-kayaks-puredata)). <br>
-The Python code is new and handles sensor data received from the Sense-Hat as well as the extra micro-controller that handles sensors outside the main Raspberry Pi box.
+The Lua code in particular has been largely untouched so far and continues to handle the GPS-processing. Instead of triggering sound files directly it now forwards zone information via OSC to pd as implemented by Dave for his [sonic-kayaks](https://github.com/nebogeo/sonic-kayaks)(-[puredata](https://github.com/nebogeo/sonic-kayaks-puredata)) project.<br>
+The Python code is new and handles sensor data received from the Sense-Hat as well as the extra micro-controller that connects to sensors outside the main Raspberry Pi box.
 
+To install `git clone` this repository as well as glouis14/sonic-bike-init<br>
+More documentation about additional installs/requirements to follow - for now check the two install logs in /docs which cover most of the details.
 
 
 License
