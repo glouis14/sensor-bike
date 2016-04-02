@@ -1,0 +1,121 @@
+#N canvas 638 233 1297 806 10;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array out 100 float 3;
+#A 0 -0.185715 -0.305924 -0.419948 -0.526024 -0.622554 -0.708086 -0.781342
+-0.841232 -0.88688 -0.917664 -0.933183 -0.933277 -0.918011 -0.887727
+-0.843005 -0.784638 -0.713636 -0.631194 -0.538726 -0.437782 -0.330043
+-0.217293 -0.101405 0.0157032 0.132099 0.245864 0.355114 0.458047 0.552966
+0.638301 0.712627 0.774688 0.823462 0.858115 0.878043 0.882856 0.872438
+0.846917 0.806657 0.752251 0.684499 0.604472 0.513408 0.412726 0.303998
+0.188932 0.0693503 -0.0528549 -0.175746 -0.297365 -0.415764 -0.52905
+-0.635401 -0.733096 -0.82053 -0.896285 -0.959106 -1.00794 -1.04193
+-1.06046 -1.06317 -1.04995 -1.02089 -0.97635 -0.916951 -0.843535 -0.757156
+-0.659062 -0.550689 -0.433655 -0.309696 -0.180656 -0.0484592 0.0849101
+0.217452 0.347183 0.472156 0.590486 0.70041 0.800285 0.88862 0.964091
+1.02558 1.0722 1.10327 1.11838 1.11728 1.10009 1.06709 1.01884 0.956123
+0.879921 0.791463 0.692146 0.583526 0.467293 0.345268 0.219349 0.0914851
+-0.0363484;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 58 606 graph;
+#X obj 453 442 tabwrite~ out;
+#X obj 490 396 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 452 418 metro 250;
+#X obj 273 355 +~;
+#X obj 266 428 dac~;
+#X text 70 271 zone subpatches;
+#X msg 226 16 port 8888;
+#X obj 225 36 udpreceive 8888;
+#X obj 225 56 unpackOSC;
+#X obj 223 84 route /entered-zone /left-zone;
+#X obj 25 318 loadbang;
+#X msg 27 344 1;
+#X obj 119 346 delay 5000;
+#X msg 77 345 0;
+#X msg 822 32 \; pd dsp 1;
+#X obj 823 6 loadbang;
+#X obj 144 204 select Home1 Home2 Home3 ubSquare MartelloBridge;
+#X obj 121 74 print OSC;
+#X obj 12 135 print enter;
+#X obj 435 127 print leave;
+#X obj 182 235 f;
+#X floatatom 314 172 5 0 0 0 - - -, f 5;
+#X obj 264 241 f;
+#X obj 347 232 f;
+#X obj 413 237 f;
+#X obj 536 237 f;
+#X msg 238 142 1;
+#X msg 316 141 0;
+#X msg 58 79 Home2;
+#X obj 214 107 t a b;
+#X msg 511 68 Home2;
+#X obj 145 170 unpack s;
+#X obj 322 108 t a b;
+#X obj 871 119 unpackOSC;
+#X obj 871 99 udpreceive 9001;
+#X obj 869 140 route /ser;
+#X obj 863 211 s ser;
+#X floatatom 863 186 5 0 0 0 - - -, f 5;
+#X obj 230 243 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 196 268 zone_Home1;
+#X obj 271 268 zone_Home2;
+#X obj 344 265 zone_Home3;
+#X obj 413 270 zone_PubSquare;
+#X obj 524 269 zone_MartelloBridge;
+#X obj 568 360 zone_chimp;
+#X obj 27 368 zone_startup;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 19 0;
+#X connect 10 0 30 0;
+#X connect 10 1 20 0;
+#X connect 10 1 33 0;
+#X connect 11 0 12 0;
+#X connect 11 0 13 0;
+#X connect 12 0 46 0;
+#X connect 13 0 14 0;
+#X connect 14 0 46 0;
+#X connect 16 0 15 0;
+#X connect 17 0 21 0;
+#X connect 17 1 23 0;
+#X connect 17 2 24 0;
+#X connect 17 3 25 0;
+#X connect 17 4 26 0;
+#X connect 21 0 40 0;
+#X connect 22 0 21 1;
+#X connect 22 0 23 1;
+#X connect 22 0 24 1;
+#X connect 22 0 25 1;
+#X connect 22 0 26 1;
+#X connect 23 0 45 0;
+#X connect 24 0 42 0;
+#X connect 25 0 43 0;
+#X connect 26 0 44 0;
+#X connect 27 0 22 0;
+#X connect 28 0 22 0;
+#X connect 29 0 30 0;
+#X connect 30 0 32 0;
+#X connect 30 1 27 0;
+#X connect 31 0 33 0;
+#X connect 32 0 17 0;
+#X connect 33 0 32 0;
+#X connect 33 1 28 0;
+#X connect 34 0 36 0;
+#X connect 35 0 34 0;
+#X connect 36 0 38 0;
+#X connect 38 0 37 0;
+#X connect 39 0 23 0;
+#X connect 40 0 4 0;
+#X connect 41 0 4 0;
+#X connect 42 0 4 0;
+#X connect 43 0 4 0;
+#X connect 44 0 4 0;
+#X connect 45 0 4 0;
+#X connect 46 0 4 0;
