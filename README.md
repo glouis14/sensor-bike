@@ -1,18 +1,19 @@
-SENSOR BIKE SETUP
-=================
+###SENSOR BIKE
 
-Based on Dave Griffiths' Sonic Kayaks which added pd (pure data) patches to the mix.
-This was expanded with Python scripts to bring in sensor data to these patches, along with the familiar GPS-handling implemented in Lua.
+The Sensor-Bike is an extension of the Sonic-Bike by [Kaffe Matthews / BRI](http://sonicbikes.net) with additional sensors beyond the existing GPS-system.
 
-## The lastest installation instructions can be found here:
-https://github.com/sonicbikes/sonic-bike-init
+It inherits code from Wolfgang Hauptfleisch, Dave Griffiths, Tom Keene & Jairo Sanchez.<br>
+The Lua code in particular has been largely untouched so far and continues to handle the GPS-processing. Instead of triggering sound files directly it now forwards zone information via OSC to pd as implemented by Dave.<br>
+The initial pd patches are derived from Dave's [sonic-kayaks](https://github.com/nebogeo/sonic-kayaks)(-[puredata](https://github.com/nebogeo/sonic-kayaks-puredata)). <br>
+The Python code is new and handles sensor data received from the Sense-Hat as well as the extra micro-controller that handles sensors outside the main Raspberry Pi box.
+
 
 
 License
 ------------------
-Swamp Bike Opera embedded system for Kaffe Matthews <br>
-Copyright (C) 2012 Wolfgang Hauptfleisch, Dave Griffiths<br>
-Later additions made by Tom Keene & Jairo Sanchez<br>
+Sonic-Bike embedded system for Kaffe Matthews <br>
+Copyright (C) 2016 Sukandar Kartadinata <br>
+Based on code by Wolfgang Hauptfleisch, Dave Griffiths, Tom Keene & Jairo Sanchez<br>
 
 This program is free software: you can redistribute it and/or modify<br>
 it under the terms of the GNU General Public License as published by<br>
