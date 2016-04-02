@@ -8,9 +8,6 @@ In absence of a router with Ethernet ports we had to get the WiFi dongle working
 http://www.ghacks.net/2009/04/14/connect-to-a-wireless-network-via-command-line/
 https://www.modmypi.com/blog/how-to-set-up-the-ralink-rt5370-wifi-dongle-on-raspian
 
-	sudo cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf.bak
-	sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
-	
 In /etc/wpa_supplicant/wpa_supplicant.conf add this:
 	
 	network={
